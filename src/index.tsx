@@ -4,6 +4,7 @@ import * as esbuild from "esbuild-wasm";
 import { unpkgPathPlugin } from "./plugins/unpkg-path-plugin";
 import { fetchPlugin } from "./plugins/fetch-plugin";
 import CodeEditor from "./components/code-editor";
+import "bulmaswatch/superhero/bulmaswatch.min.css";
 
 // 2) Get a reference to the div with ID root
 const el = document.getElementById("root");
@@ -68,7 +69,10 @@ const App = () => {
   `;
   return (
     <div>
-      <CodeEditor />
+      <CodeEditor
+        initialValue="const a = 1;"
+        onChange={(value = "") => setInput(value)}
+      />
       <textarea
         cols={80}
         rows={30}
