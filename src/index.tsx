@@ -1,6 +1,7 @@
-import CodeCell from "./components/code-cell";
+// import CodeCell from "./components/code-cell";
 import ReactDOM from "react-dom/client";
 import "bulmaswatch/superhero/bulmaswatch.min.css";
+import TextEditor from "./components/text-editor";
 
 // 2) Get a reference to the div with ID root
 const el = document.getElementById("root");
@@ -11,7 +12,7 @@ const root = ReactDOM.createRoot(el!);
 const App = () => {
   return (
     <div>
-      <CodeCell />
+      <TextEditor />
     </div>
   );
 };
