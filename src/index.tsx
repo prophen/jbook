@@ -1,7 +1,7 @@
-// import CodeCell from "./components/code-cell";
+import CellList from "./components/cell-list";
 import ReactDOM from "react-dom/client";
 import "bulmaswatch/superhero/bulmaswatch.min.css";
-import TextEditor from "./components/text-editor";
+import "@fortawesome/fontawesome-free/css/all.min.css";
 import { store } from "./state";
 import { Provider } from "react-redux";
 
@@ -15,7 +15,7 @@ const App = () => {
   return (
     <Provider store={store}>
       <div>
-        <TextEditor />
+        <CellList />
       </div>
     </Provider>
   );
