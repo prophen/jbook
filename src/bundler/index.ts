@@ -20,6 +20,8 @@ const bundle = async (rawCode: string) => {
       bundle: true,
       write: false,
       plugins: [unpkgPathPlugin(), fetchPlugin(rawCode)],
+      jsxFactory: "_React.createElement",
+      jsxFragment: "_React.fragment",
     });
     return {
       code: result.outputFiles[0].text,
